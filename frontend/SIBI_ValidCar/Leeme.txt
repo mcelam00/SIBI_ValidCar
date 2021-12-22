@@ -1,0 +1,39 @@
+DESCRIPCIÓN DEL DESPLIEGUE Y REQUISITOS NECESARIOS:
+La solución adoptada se basa en la utilizacion de las tecnologías Express y NodeJS del lado del servidor y Vue y Vuetify del lado del cliente. Finalmente, MongoDB para la base de datos. 
+
+INSTRUCCIONES PARA EL DESPLIEGUE: 
+
+
+-BASE DE DATOS
+1. Es necesario descargar e instalar la tecnología de base de datos empleada, en nuestro caso MongoDB: https://www.mongodb.com/try/download/community
+2. Para importar los ficheros coleccions y socios hay que abrir el programa MongoDB Compass.
+3. Pegar la url de la base de datos: mongodb://localhost/AW_Coleccion_Cromos
+4. En la pestaña Databases que se carga picar CREATE DATABASE y nombrarla: AW_Coleccion_Cromos en database y en collection name ponemos "coleccions"
+5. Picamos en la base de datos que se nos crea y entraremos a una pantalla en la que veremos la coleccion "coleccions"
+6. Pulsamos en CREATE COLLECTION y la nombramos socios
+7. Entramos en coleccions y pulsamos ADD DATA Import File y buscamos el JSON coleccions.json 
+8. Salimos de coleccions y entramos en socios y lo mismo, ADD DATA, Import File y seleccionamos socios.json
+9. Seguimos al punto siguiente, lado del servidor
+
+
+-LADO DEL SERVIDOR
+
+1.Es necesario instalar nodejs desde su página web: https://nodejs.org/en/
+2.Situandonos en el directorio de trabajo (el que contiene las carpetas backend, public, src y los archivos package y package-lock), abrir una terminal y escribir: npm install
+3.Situandonos en el directorio de trabajo (el que contiene las carpetas backend, public, src y los archivos package y package-lock), abrir una terminal y entrar en el directorio backend: cd backend
+4.Ejecutar el comando: node index.js
+-El servidor estará escuchando por defecto en el puerto 5000 (puede cambiarse en la linea "servidor.set('puertoServidor', 5000);" si se desea otro puerto).
+-Nos olvidaremos de él dejándolo en ejecución en todo momento y pasamos a arrancar el lado del cliente
+
+
+
+-LADO DEL CLIENTE
+
+1. Situandonos en el directorio de trabajo (el que contiene las carpetas backend, public, src y los archivos package y package-lock), abrir una terminal y escribir: npm run serve
+3. Tras el mensaje "Compiled successfully" podremos ver "App running at" y seleccionaremos la URL indicada en la línea "-Local:" que permitirá acceder a la página principal
+
+npm update si no se tienen los node modules
+
+
+
+REFERENCIA DE GITHUB DEL PROYECTO:https://github.com/scalvd01/AW_Practica_final.git
